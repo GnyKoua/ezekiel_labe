@@ -21,12 +21,12 @@ const io = require('socket.io')(server, {
 io.on('connection', function (socket) {
   console.log('User Connected : ', socket.id);
 
-  socket.on('send-commande', function (dem) {
-    io.emit('receive-commande', dem);
+  socket.on('send-demande', function (dem) {
+    io.emit('receive-demande', dem);
   });
 
   socket.on('send-response', function (dem) {
-    io.emit('result-commande', dem);
+    io.emit('result-demande', dem);
   });
 });
 

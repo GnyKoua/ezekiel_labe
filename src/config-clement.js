@@ -31,8 +31,8 @@ const config = {
     database: {
         HOST: 'localhost',
         USER: "root",
-        PASSWORD: "Ezekiel@@@1",
-        DB: "base",
+        PASSWORD: "root",
+        DB: "ezekiel_labe",
         dialect: "mysql",
         pool: {
           max: 5,
@@ -50,8 +50,8 @@ const config = {
     database: {
         HOST: 'localhost',
         USER: "root",
-        PASSWORD: "Ezekiel@@@1",
-        DB: "base",
+        PASSWORD: "root",
+        DB: "ezekiel_labe",
         dialect: "mysql",
         pool: {
           max: 5,
@@ -68,8 +68,8 @@ const config = {
     database: {
         HOST: 'localhost',
         USER: "root",
-        PASSWORD: "Ezekiel@@@1",
-        DB: "base",
+        PASSWORD: "root",
+        DB: "ezekiel_labe",
         dialect: "mysql",
         pool: {
           max: 5,

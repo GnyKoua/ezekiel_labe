@@ -23,7 +23,7 @@ export default async ({
     };
     const Disponibilite = db.disponibilite;
     const Commande = db.commande;
-    const CtatutCommande = db.statutCommande;
+    const StatutCommande = db.statutCommande;
     const DemandeLivraison = db.demandeLivraison;
 
     const isAlreadyTreated = await Commande.findOne({
@@ -32,7 +32,7 @@ export default async ({
         statutCommande_id: 3
       },
       include: [{
-        model: CtatutCommande,
+        model: StatutCommande,
         required: true,
         as: "statutCommande"
       }]
@@ -109,7 +109,7 @@ export default async ({
           let res = demmandeRejeteesByLivreur.find(elem => elem.livreur_id == dis.LivreurId);
           dis.NombreRejet = (res != undefined) ? res.NombreRejet : 0;
         });
-        
+
         distancePD = distancePD.sort((a, b) => (a.NombreRejet < b.NombreRejet) ? -1 : a.NombreRejet > b.NombreRejet ? 1 : 0);
 
         res.json(distancePD);
