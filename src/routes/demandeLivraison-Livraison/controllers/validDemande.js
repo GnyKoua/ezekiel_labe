@@ -12,10 +12,11 @@ export default async ({
     const Livreur = db.livreur;
     const Livraison = db.livraison;
     const Disponibilite = db.disponibilite;
+    const StatutLivraison = db.statutLivraison;
 
     let demande = await DemandeLivraison.findOne({
       where: {
-        livreurId: body.livreurId,
+        livreur_id: body.livreurId,
         demandeLivraison_id: body.demandeLivraisonId
       }
     });
@@ -26,7 +27,7 @@ export default async ({
 
       demande = await DemandeLivraison.findOne({
         where: {
-          livreurId: body.livreurId,
+          livreur_id: body.livreurId,
           demandeLivraison_id: body.demandeLivraisonId,
         },
         include: [{
@@ -43,11 +44,6 @@ export default async ({
             model: Livreur,
             required: true,
             as: "livreur"
-          },
-          {
-            model: Livraison,
-            required: true,
-            as: "livraison"
           }
         ]
       });
@@ -69,6 +65,21 @@ export default async ({
       await dispoLivreur.update({
         statut: 0
       });
+
+      //Livraison
+      const livraison = await Livraison.findOne({
+        where: {
+          demandeLivraison_id: demande.demandeLivraison_id,
+        },
+        include: [{
+          model: StatutLivraison,
+          required: true,
+          as: "statutLivraison"
+        }]
+      });
+      demande = JSON.stringify(demande);
+      demande = JSON.parse(demande);
+      demande.livraison = JSON.parse(JSON.stringify(livraison));
 
       return res.json({
         success: true,

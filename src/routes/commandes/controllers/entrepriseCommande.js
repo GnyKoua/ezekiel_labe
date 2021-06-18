@@ -1,7 +1,5 @@
 import db from '../../../models'
 const sequelize = require("sequelize");
-//import { sign } from '../../../services/jwt'
-//import bcrypt from 'bcryptjs'
 
 
 export default async ({
@@ -24,44 +22,13 @@ export default async ({
       statutCommande_id: 1
     })
 
-
-    //const token = await sign(user.id)
-    //body.nom
     return res.json({
       success: true,
       users: body,
-      // token,
-      id: commande.commande_id
+      commande: commande
     })
 
   } catch (err) {
     return next(err)
   }
-}
-
-
-
-{
-  /*
-
-
-  export default async ({ bodymen: { body } }, res, next) => {
-      try {
-          const User = db.user
-
-          const res = await User.create({
-
-          })
-
-          //body.nom
-          return res.json({
-              success: true,
-              users: body
-          })
-
-      } catch (err) {
-          return next(err)
-      }
-  }
-  */
 }

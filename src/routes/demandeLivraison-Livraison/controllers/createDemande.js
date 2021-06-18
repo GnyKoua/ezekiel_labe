@@ -80,6 +80,11 @@ export default async ({
           }
         ]
       });
+      
+      //Livraison
+      demandeRes = JSON.stringify(demandeRes);
+      demandeRes = JSON.parse(demandeRes);
+      demandeRes.livraison = null;
 
       return res.json({
         success: true,
