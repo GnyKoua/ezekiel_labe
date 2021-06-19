@@ -35,7 +35,7 @@ io.on('connection', function (socket) {
 });
 
 setImmediate(() => {
-  server.listen(PORT, () => console.log(`Listening on ${PORT}`))
+  server.listen(PORT, () => console.log(`Server run on ${PORT}`))
 })
 
 export default app

@@ -29,17 +29,17 @@ const config = {
     ip: process.env.IP || '0.0.0.0',
     apiRoot: '/api',
     database: {
-        HOST: 'localhost',
-        USER: "root",
-        PASSWORD: "Ezekiel@@@1",
-        DB: "base",
-        dialect: "mysql",
-        pool: {
-          max: 5,
-          min: 0,
-          acquire: 30000,
-          idle: 10000
-        }
+      HOST: 'localhost',
+      USER: "root",
+      PASSWORD: "root",
+      DB: "ezekiel_labe",
+      dialect: "mysql",
+      pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+      }
     }
   },
   test: {
@@ -48,17 +48,17 @@ const config = {
   development: {
     baseUrl: 'localhost:8080/api',
     database: {
-        HOST: 'localhost',
-        USER: "root",
-        PASSWORD: "Ezekiel@@@1",
-        DB: "base",
-        dialect: "mysql",
-        pool: {
-          max: 5,
-          min: 0,
-          acquire: 30000,
-          idle: 10000
-        }
+      HOST: 'localhost',
+      USER: "root",
+      PASSWORD: "root",
+      DB: "ezekiel_labe",
+      dialect: "mysql",
+      pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+      }
     }
   },
   production: {
@@ -66,19 +66,19 @@ const config = {
     ip: '127.0.0.1' || undefined,
     port: 8080 || 8080,
     database: {
-        HOST: 'localhost',
-        USER: "root",
-        PASSWORD: "Ezekiel@@@1",
-        DB: "base",
-        dialect: "mysql",
-        pool: {
-          max: 5,
-          min: 0,
-          acquire: 30000,
-          idle: 10000
-        }
+      HOST: 'localhost',
+      USER: "root",
+      PASSWORD: "root",
+      DB: "ezekiel_labe",
+      dialect: "mysql",
+      pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+      }
     }
- 
+
   }
 }
 
