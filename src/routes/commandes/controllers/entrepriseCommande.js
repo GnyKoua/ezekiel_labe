@@ -19,7 +19,8 @@ export default async ({
       PoidsTotalColis: body.PoidsTotalColis,
       commentaire: body.commentaire,
       commandeType: 'entreprise',
-      statutCommande_id: 1
+      statutCommande_id: 1,
+      user_id: body.user_id
     })
 
     return res.json({

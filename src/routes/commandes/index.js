@@ -8,7 +8,10 @@ const router = new Router()
 
 router.post('/entreprise/commande',
     body({
-
+        user_id: {
+            type: Number,
+            required: true
+        },
         adresseDepart: {
             type: String,
             required: true
