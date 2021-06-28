@@ -32,7 +32,7 @@ const config = {
       HOST: 'localhost',
       USER: "root",
       PASSWORD: "root",
-      DB: "ezekiel_labe",
+      DB: "pickdeli",
       dialect: "mysql",
       pool: {
         max: 5,
@@ -51,7 +51,7 @@ const config = {
       HOST: 'localhost',
       USER: "root",
       PASSWORD: "root",
-      DB: "ezekiel_labe",
+      DB: "pickdeli",
       dialect: "mysql",
       pool: {
         max: 5,
@@ -69,7 +69,7 @@ const config = {
       HOST: 'localhost',
       USER: "root",
       PASSWORD: "root",
-      DB: "ezekiel_labe",
+      DB: "pickdeli",
       dialect: "mysql",
       pool: {
         max: 5,

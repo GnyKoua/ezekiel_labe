@@ -1,0 +1,5 @@
+npm i -g sequelize
+npm i -g mysql2
+npm i -g sequelize-auto
+
+sequelize-auto -h 127.0.0.1 -d pickdeli -u [Username] -x [Password] -p 3306  --dialect mysql -o src\NewModels
