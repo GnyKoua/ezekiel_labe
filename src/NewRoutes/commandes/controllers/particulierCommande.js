@@ -20,7 +20,8 @@ export default async ({
       PoidsTotalColis: body.PoidsTotalColis,
       commentaire: body.commentaire,
       commandeType: 'particulier',
-      statutCommande_id: 1
+      statutCommande_id: 1,
+
     })
 
     //const token = await sign(user.id)
@@ -29,7 +30,8 @@ export default async ({
       success: true,
       users: body,
       // token,
-      id: commande.id
+      id: commande.id,
+
     })
 
   } catch (err) {
